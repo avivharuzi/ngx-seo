@@ -1,9 +1,28 @@
 {
   "name": "@avivharuzi/ngx-seo",
   "version": "1.0.0",
+  "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
     "@angular/common": "^9.1.1",
     "@angular/core": "^9.1.1",
     "tslib": "^1.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avivharuzi/ngx-seo.git"
+  },
+  "keywords": [
+    "angular",
+    "library",
+    "seo",
+    "title",
+    "meta",
+    "tags"
+  ],
+  "author": "Aviv Haruzi <avivharuzi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avivharuzi/ngx-seo/issues"
+  },
+  "homepage": "https://github.com/avivharuzi/ngx-seo#readme"
 }
