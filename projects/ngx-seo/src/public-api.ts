@@ -2,6 +2,7 @@
  * Public API Surface of ngx-seo
  */
 
-// export * from './lib/ngx-seo.service';
-// export * from './lib/ngx-seo.component';
-// export * from './lib/ngx-seo.module';
+export * from './lib/shared/ngx-seo.service';
+export * from './lib/shared/ngx-seo';
+export * from './lib/shared/ngx-seo-config';
+export * from './lib/ngx-seo.module';
