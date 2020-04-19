@@ -4,7 +4,7 @@ Update SEO title and meta tags easily in Angular apps.
 
 I created this library because other libraries are not fit enough to my requirements.
 
-![npm](https://img.shields.io/npm/v/ngx-seo) ![NPM](https://img.shields.io/npm/l/ngx-seo) ![npm bundle size](https://img.shields.io/bundlephobia/min/ngx-seo)
+![npm](https://img.shields.io/npm/v/@avivharuzi/ngx-seo) ![NPM](https://img.shields.io/npm/l/@avivharuzi/ngx-seo) ![npm bundle size](https://img.shields.io/bundlephobia/min/@avivharuzi/ngx-seo)
 
 ## Environment Support
 
