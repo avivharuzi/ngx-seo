@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start:lib": "ng build ngx-seo --watch",
-    "build:lib": "ng build ngx-seo",
+    "build:lib": "ng build ngx-seo --prod",
     "test:lib": "ng test ngx-seo",
     "test:lib:without-watch": "ng test ngx-seo --watch false",
     "lint:lib": "ng lint ngx-seo",

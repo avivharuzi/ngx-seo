@@ -1,6 +1,6 @@
 {
   "name": "@avivharuzi/ngx-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
     "@angular/common": "^9.1.1",
