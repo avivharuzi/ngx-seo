@@ -68,7 +68,7 @@ const routes: Routes = [
 ];
 ```
 
-Now in order update the title and meta tags we need to subscribe in our `app.component`.
+Now in order update the title and meta tags we need to **subscribe** in our `app.component`.
 
 ```ts
 import { Component, OnInit } from '@angular/core';
