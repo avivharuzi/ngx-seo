@@ -184,6 +184,10 @@ Update meta tag author.
 
 Update meta tag site name.
 
+#### NgxSeoService.setMetaCanonical(metaCanonical: string): void
+
+Update meta tag canonical.
+
 #### NgxSeoService.removeMeta(): void
 
 Will remove all meta tags from HTML document.

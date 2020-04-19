@@ -108,6 +108,10 @@ export class NgxSeoService {
     if (meta.siteName) {
       this.setMetaSiteName(meta.siteName);
     }
+
+    if (meta.canonical) {
+      this.setMetaCanonical(meta.canonical);
+    }
   }
 
   setMetaKeywords(metaKeywords: string | string[]): void {
@@ -173,6 +177,12 @@ export class NgxSeoService {
     const siteName: MetaDefinition = { name: NGX_SEO_META_KEYS.OG_SITE_NAME, content: metaSiteName };
 
     this.meta.updateTag(siteName);
+  }
+
+  setMetaCanonical(metaCanonical: string) {
+    const canonical: MetaDefinition = { name: NGX_SEO_META_KEYS.CANONICAL, content: metaCanonical };
+
+    this.meta.updateTag(canonical);
   }
 
   /**

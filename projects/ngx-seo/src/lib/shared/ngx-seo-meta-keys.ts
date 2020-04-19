@@ -12,4 +12,5 @@ export const NGX_SEO_META_KEYS = {
   TWITTER_URL: 'twitter:url',
   AUTHOR: 'author',
   OG_SITE_NAME: 'og:site_name',
+  CANONICAL: 'canonical',
 };
