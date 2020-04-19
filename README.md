@@ -118,6 +118,72 @@ export class MoiveDetailComponent implements OnInit {
 }
 ```
 
+## API
+
+### NgxSeoModule
+
+#### NgxSeoModule.forRoot(config: NgxSeoConfig)
+
+```ts
+...
+NgxSeoModule.forRoot({
+  titleSuffixBefore: '',
+  titleSuffixAfter: '',
+  preserve: false,
+})
+...
+```
+
+### NgxSeoService
+
+#### NgxSeoService.subscribe(): void
+
+Will listen to router changes and if seo key exist in router data try to add it to HTML document tags.
+
+#### NgxSeoService.setSeo(seo: NgxSeo): void
+
+Update SEO title and meta tags.
+
+#### NgxSeoService.setTitle(title: string): void
+
+Update SEO title.
+
+#### NgxSeoService.setMeta(meta: NgxSeoMeta): void
+
+Update SEO meta tags.
+
+#### NgxSeoService.setMetaKeywords(metaKeywords: string | string[]): void
+
+Update meta tag keywords.
+
+#### NgxSeoService.setMetaDescription(metaDescription: string): void
+
+Update meta tag description.
+
+#### NgxSeoService.setMetaType(metaType: string): void
+
+Update meta tag type.
+
+#### NgxSeoService.setMetaCard(metaCard: string): void
+
+Update meta tag card.
+
+#### NgxSeoService.setMetaImage(metaImage: string): void
+
+Update meta tag image.
+
+#### NgxSeoService.setMetaUrl(metaUrl: string): void
+
+Update meta tag url.
+
+#### NgxSeoService.setMetaAuthor(metaAuthor: string): void
+
+Update meta tag author.
+
+#### NgxSeoService.removeMeta(): void
+
+Will remove all meta tags from HTML document.
+
 # License
 
 [MIT](LICENSE)
