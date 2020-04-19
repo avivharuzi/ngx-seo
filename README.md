@@ -105,13 +105,19 @@ export class MoiveDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getDetails(1).subscribe(movie => {
-        this.movie = movie;
-        
-        this.ngxSeoService.setSeo({
-            title: movie.title,
-            description: movie.description,
-        });
+      this.movie = movie;
+    
+      this.ngxSeoService.setSeo({
+        title: movie.title,
+        meta: {
+          description: movie.description,
+        },
+      });
     });
   }
 }
 ```
+
+# License
+
+[MIT](LICENSE)
