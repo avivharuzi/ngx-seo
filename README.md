@@ -180,6 +180,10 @@ Update meta tag url.
 
 Update meta tag author.
 
+#### NgxSeoService.setMetaSiteName(metaSiteName: string): void
+
+Update meta tag site name.
+
 #### NgxSeoService.removeMeta(): void
 
 Will remove all meta tags from HTML document.

@@ -104,6 +104,10 @@ export class NgxSeoService {
     if (meta.author) {
       this.setMetaAuthor(meta.author);
     }
+
+    if (meta.siteName) {
+      this.setMetaSiteName(meta.siteName);
+    }
   }
 
   setMetaKeywords(metaKeywords: string | string[]): void {
@@ -163,6 +167,12 @@ export class NgxSeoService {
     const author: MetaDefinition = { name: NGX_SEO_META_KEYS.AUTHOR, content: metaAuthor };
 
     this.meta.updateTag(author);
+  }
+
+  setMetaSiteName(metaSiteName: string) {
+    const siteName: MetaDefinition = { name: NGX_SEO_META_KEYS.OG_SITE_NAME, content: metaSiteName };
+
+    this.meta.updateTag(siteName);
   }
 
   /**

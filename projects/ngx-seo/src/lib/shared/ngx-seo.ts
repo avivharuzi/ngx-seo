@@ -6,6 +6,7 @@ export interface NgxSeoMeta {
   image?: string;
   url?: string;
   author?: string;
+  siteName?: string;
 }
 
 export interface NgxSeo {
