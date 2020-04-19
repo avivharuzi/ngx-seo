@@ -169,12 +169,11 @@ export class NgxSeoService {
    * Will remove all meta tags from HTML document.
    */
   removeMeta(): void {
-    Object.values(NGX_SEO_META_KEYS).forEach(value => {
-      this.meta.removeTag(value);
-    });
-
-    // Remove special ones...
-    this.meta.removeTag('itemprop="description"');
-    this.meta.removeTag('itemprop="image"');
+    Object.values(NGX_SEO_META_KEYS)
+      .forEach(value => {
+        this.meta.removeTag(`name="${value}"`);
+        this.meta.removeTag(`itemprop="${value}"`);
+        this.meta.removeTag(`property="${value}"`);
+      });
   }
 }
