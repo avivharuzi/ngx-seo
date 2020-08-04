@@ -14,7 +14,7 @@ export class NgxSeoModule {
     }
   }
 
-  static forRoot(config: NgxSeoConfig = { preserve: false }): ModuleWithProviders {
+  static forRoot(config: NgxSeoConfig = { preserve: false }): ModuleWithProviders<NgxSeoModule> {
     return {
       ngModule: NgxSeoModule,
       providers: [
