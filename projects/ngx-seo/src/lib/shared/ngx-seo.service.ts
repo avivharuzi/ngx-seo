@@ -19,6 +19,7 @@ export class NgxSeoService {
   ) {
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Will listen to router changes and if seo key exist in router data try to add it to HTML document tags.
    */
