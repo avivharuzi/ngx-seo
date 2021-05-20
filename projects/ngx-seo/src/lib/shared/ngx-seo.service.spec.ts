@@ -8,7 +8,9 @@ describe('NgxSeoService', () => {
   let service: NgxSeoService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ imports: [RouterModule.forRoot([]), NgxSeoModule.forRoot()] });
+    TestBed.configureTestingModule({
+      imports: [RouterModule.forRoot([]), NgxSeoModule.forRoot()],
+    });
   });
 
   it('should be created', () => {

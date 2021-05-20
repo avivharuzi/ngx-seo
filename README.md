@@ -15,12 +15,12 @@ I created this library because other libraries are not fit enough to my requirem
 
 Versions compatibility list:
 
-| @avivharuzi/ngx-seo | Angular       |
-| ------------------- | ------------- |
-| 12.x.x              | 12.x.x        |
-| 11.x.x              | 11.x.x        |
-| 10.x.x              | 10.x.x        |
-| 1.x.x               | 6.xx - 9.x.x  |
+| @avivharuzi/ngx-seo | Angular      |
+| ------------------- | ------------ |
+| 12.x.x              | 12.x.x       |
+| 11.x.x              | 11.x.x       |
+| 10.x.x              | 10.x.x       |
+| 1.x.x               | 6.xx - 9.x.x |
 
 ## Installation
 
@@ -49,7 +49,7 @@ imports: [
 ],
 ```
 
-### Update Title and Meta Tags from Routes Data 
+### Update Title and Meta Tags from Routes Data
 
 Declare SEO data for each route recommended to use `NgxSeo` interface to prevent problems.
 
@@ -117,7 +117,7 @@ export class MoiveDetailComponent implements OnInit {
   ngOnInit(): void {
     this.movieService.getDetails(1).subscribe(movie => {
       this.movie = movie;
-    
+
       this.ngxSeoService.setSeo({
         title: movie.title,
         meta: {

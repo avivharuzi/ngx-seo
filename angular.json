@@ -31,9 +31,21 @@
             "tsConfig": "projects/ngx-seo/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-seo/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-seo/**/*.ts",
+              "projects/ngx-seo/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "ngx-seo"
+  "defaultProject": "ngx-seo",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
