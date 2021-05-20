@@ -50,10 +50,12 @@ export class NgxSeoService {
     }
 
     if (Object.prototype.hasOwnProperty.call(seo, 'title')) {
+      // @ts-ignore
       this.setTitle(seo.title);
     }
 
     if (Object.prototype.hasOwnProperty.call(seo, 'meta')) {
+      // @ts-ignore
       this.setMeta(seo.meta);
     }
   }

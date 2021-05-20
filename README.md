@@ -17,6 +17,7 @@ Versions compatibility list:
 
 | @avivharuzi/ngx-seo | Angular       |
 | ------------------- | ------------- |
+| 12.x.x              | 12.x.x        |
 | 11.x.x              | 11.x.x        |
 | 10.x.x              | 10.x.x        |
 | 1.x.x               | 6.xx - 9.x.x  |

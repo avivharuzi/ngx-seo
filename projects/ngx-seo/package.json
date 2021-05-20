@@ -1,10 +1,10 @@
 {
   "name": "@avivharuzi/ngx-seo",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
-    "@angular/common": "11.x",
-    "@angular/core": "11.x"
+    "@angular/common": "12.x",
+    "@angular/core": "12.x"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/avivharuzi/ngx-seo#readme",
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.1.0"
   }
 }
