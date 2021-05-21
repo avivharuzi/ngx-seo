@@ -17,7 +17,7 @@
     "test:lib": "ng test ngx-seo",
     "test:lib:without-watch": "ng test ngx-seo --watch false",
     "copy:lib": "cp README.md dist/ngx-seo && cp LICENSE dist/ngx-seo",
-    "publish:lib": "npm run lint:lib && npm run test:lib:without-watch && npm run build:lib && npm run copy:lib && cd dist/ngx-seo && npm publish --access public"
+    "publish:lib": "npm run lint && npm run test:lib:without-watch && npm run build:lib && npm run copy:lib && cd dist/ngx-seo && npm publish --access public"
   },
   "private": true,
   "dependencies": {
