@@ -1,3 +1,5 @@
+import { MetaDefinition } from '@angular/platform-browser';
+
 export interface NgxSeoMeta {
   keywords?: string | string[];
   description?: string;
@@ -8,6 +10,7 @@ export interface NgxSeoMeta {
   author?: string;
   siteName?: string;
   canonical?: string;
+  customTags?: MetaDefinition[];
 }
 
 export interface NgxSeo {
