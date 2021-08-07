@@ -79,6 +79,25 @@ const routes: Routes = [
 ];
 ```
 
+You can also specify custom meta tags by providing array of MetaDefinition.
+
+```ts
+const SEO_SPECIAL: NgxSeo = {
+  meta: {
+    customTags: {
+      mySpecial: {
+        name: 'mySpecial',
+        content: 'mySpecial content :P',
+      },
+    },
+  },
+};
+
+const routes: Routes = [
+  { path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } },
+];
+```
+
 Now in order update the title and meta tags we need to **subscribe** in our `app.component`.
 
 ```ts
@@ -198,6 +217,10 @@ Update meta tag site name.
 #### NgxSeoService.setMetaCanonical(metaCanonical: string): void
 
 Update meta tag canonical.
+
+#### NgxSeoService.setMetaCustomTags(customTags: MetaDefinition[]): void
+
+Update custom meta tags.
 
 #### NgxSeoService.removeMeta(): void
 

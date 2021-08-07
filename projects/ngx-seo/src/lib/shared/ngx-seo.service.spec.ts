@@ -31,149 +31,208 @@ describe('NgxSeoService', () => {
 
   it('should be set title correctly', () => {
     expect(title.getTitle()).toBe('');
-    expect(getMetaTagContent('property', NGX_SEO_TITLE_KEYS.OG_TITLE))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_TITLE_KEYS.TWITTER_TITLE))
-      .toBeUndefined();
-    expect(getMetaTagContent('itemprop', NGX_SEO_TITLE_KEYS.NAME))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_TITLE_KEYS.OG_TITLE)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_TITLE_KEYS.TWITTER_TITLE)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('itemprop', NGX_SEO_TITLE_KEYS.NAME)
+    ).toBeUndefined();
     const titleValue = 'some title';
     service.setTitle(titleValue);
     expect(title.getTitle()).toBe(titleValue);
-    expect(getMetaTagContent('property', NGX_SEO_TITLE_KEYS.OG_TITLE))
-      .toBe(titleValue);
-    expect(getMetaTagContent('name', NGX_SEO_TITLE_KEYS.TWITTER_TITLE))
-      .toBe(titleValue);
-    expect(getMetaTagContent('itemprop', NGX_SEO_TITLE_KEYS.NAME))
-      .toBe(titleValue);
+    expect(getMetaTagContent('property', NGX_SEO_TITLE_KEYS.OG_TITLE)).toBe(
+      titleValue
+    );
+    expect(getMetaTagContent('name', NGX_SEO_TITLE_KEYS.TWITTER_TITLE)).toBe(
+      titleValue
+    );
+    expect(getMetaTagContent('itemprop', NGX_SEO_TITLE_KEYS.NAME)).toBe(
+      titleValue
+    );
   });
 
   it('should be set meta keywords correctly', () => {
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.KEYWORDS))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.KEYWORDS)
+    ).toBeUndefined();
     const keywordsValue = 'programming, testing';
     service.setMetaKeywords(keywordsValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.KEYWORDS))
-      .toBe(keywordsValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.KEYWORDS)).toBe(
+      keywordsValue
+    );
   });
 
   it('should be set meta description correctly', () => {
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION)
+    ).toBeUndefined();
     const descriptionValue = 'My description value :P';
     service.setMetaDescription(descriptionValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBe(descriptionValue);
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION))
-      .toBe(descriptionValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION))
-      .toBe(descriptionValue);
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBe(descriptionValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.DESCRIPTION)).toBe(
+      descriptionValue
+    );
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION)
+    ).toBe(descriptionValue);
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION)
+    ).toBe(descriptionValue);
+    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION)).toBe(
+      descriptionValue
+    );
   });
 
   it('should be set meta type correctly', () => {
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_TYPE))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_TYPE)
+    ).toBeUndefined();
     const typeValue = 'something nice';
     service.setMetaType(typeValue);
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_TYPE))
-      .toBe(typeValue);
+    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_TYPE)).toBe(
+      typeValue
+    );
   });
 
   it('should be set meta card correctly', () => {
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_CARD))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_CARD)
+    ).toBeUndefined();
     const cardValue = 'card';
     service.setMetaCard(cardValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_CARD))
-      .toBe(cardValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_CARD)).toBe(
+      cardValue
+    );
   });
 
   it('should be set meta image correctly', () => {
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_IMAGE))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_IMAGE))
-      .toBeUndefined();
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.IMAGE))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_IMAGE)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_IMAGE)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('itemprop', NGX_SEO_META_KEYS.IMAGE)
+    ).toBeUndefined();
     const imageValue = 'src image...';
     service.setMetaImage(imageValue);
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_IMAGE))
-      .toBe(imageValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_IMAGE))
-      .toBe(imageValue);
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.IMAGE))
-      .toBe(imageValue);
+    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_IMAGE)).toBe(
+      imageValue
+    );
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_IMAGE)).toBe(
+      imageValue
+    );
+    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.IMAGE)).toBe(
+      imageValue
+    );
   });
 
   it('should be set meta url correctly', () => {
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_URL))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_URL))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_URL)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_URL)
+    ).toBeUndefined();
     const urlValue = 'https://www.google.com';
     service.setMetaUrl(urlValue);
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_URL))
-      .toBe(urlValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_URL))
-      .toBe(urlValue);
+    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_URL)).toBe(
+      urlValue
+    );
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_URL)).toBe(
+      urlValue
+    );
   });
 
   it('should be set meta author correctly', () => {
     expect(getMetaTagContent('name', NGX_SEO_META_KEYS.AUTHOR)).toBeUndefined();
     const authorValue = 'Aviv Haruzi';
     service.setMetaAuthor(authorValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.AUTHOR))
-      .toBe(authorValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.AUTHOR)).toBe(
+      authorValue
+    );
   });
 
   it('should be set meta site correctly', () => {
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.OG_SITE_NAME))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.OG_SITE_NAME)
+    ).toBeUndefined();
     const siteValue = 'Aviv Haruzi Site';
     service.setMetaSiteName(siteValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.OG_SITE_NAME))
-      .toBe(siteValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.OG_SITE_NAME)).toBe(
+      siteValue
+    );
   });
 
   it('should be set meta canonical correctly', () => {
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.CANONICAL))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.CANONICAL)
+    ).toBeUndefined();
     const canonicalValue = 'canonical example';
     service.setMetaCanonical(canonicalValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.CANONICAL))
-      .toBe(canonicalValue);
+    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.CANONICAL)).toBe(
+      canonicalValue
+    );
+  });
+
+  it('should create custom meta tags', () => {
+    const customTag1 = 'myCustomTag1';
+    const customTag2 = 'myCustomTag2';
+    const customTag1Content = 'myCustomTag1 content!';
+    const customTag2Content = 'myCustomTag2 content!';
+    expect(getMetaTagContent('name', customTag1)).toBeUndefined();
+    expect(getMetaTagContent('name', customTag2)).toBeUndefined();
+    service.setMetaCustomTags([
+      { name: customTag1, content: customTag1Content },
+      { name: customTag2, content: customTag2Content },
+    ]);
+    expect(getMetaTagContent('name', customTag1)).toBe(customTag1Content);
+    expect(getMetaTagContent('name', customTag2)).toBe(customTag2Content);
   });
 
   it('should remove all meta tags', () => {
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION)
+    ).toBeUndefined();
     const removeAllMetaTagsValue = 'remove all meta test';
     service.setMetaDescription(removeAllMetaTagsValue);
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION))
-      .toBe(removeAllMetaTagsValue);
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION))
-      .toBe(removeAllMetaTagsValue);
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBe(removeAllMetaTagsValue);
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION)
+    ).toBe(removeAllMetaTagsValue);
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION)
+    ).toBe(removeAllMetaTagsValue);
+    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION)).toBe(
+      removeAllMetaTagsValue
+    );
     service.removeMeta();
-    expect(getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION))
-      .toBeUndefined();
-    expect(getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION))
-      .toBeUndefined();
+    expect(
+      getMetaTagContent('property', NGX_SEO_META_KEYS.OG_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('name', NGX_SEO_META_KEYS.TWITTER_DESCRIPTION)
+    ).toBeUndefined();
+    expect(
+      getMetaTagContent('itemprop', NGX_SEO_META_KEYS.DESCRIPTION)
+    ).toBeUndefined();
   });
 });
 

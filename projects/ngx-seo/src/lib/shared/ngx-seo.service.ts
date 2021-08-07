@@ -125,6 +125,10 @@ export class NgxSeoService {
     if (meta.canonical) {
       this.setMetaCanonical(meta.canonical);
     }
+
+    if (meta.customTags && meta.customTags.length > 0) {
+      this.setMetaCustomTags(meta.customTags);
+    }
   }
 
   setMetaKeywords(metaKeywords: string | string[]): void {
@@ -242,6 +246,12 @@ export class NgxSeoService {
     };
 
     this.meta.updateTag(canonical);
+  }
+
+  setMetaCustomTags(customTags: MetaDefinition[]): void {
+    customTags.forEach(customTag => {
+      this.meta.updateTag(customTag);
+    });
   }
 
   /**
