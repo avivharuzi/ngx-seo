@@ -2,6 +2,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { Inject, Injectable } from '@angular/core';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 
 import { NGX_SEO_META_KEYS } from './ngx-seo-meta-keys';
 import { NGX_SEO_TITLE_KEYS } from './ngx-seo-title-keys';
@@ -18,15 +19,14 @@ export class NgxSeoService {
     private title: Title
   ) {}
 
-  // noinspection JSUnusedGlobalSymbols
   /**
    * Will listen to router changes and if seo key exist in router data try to add it to HTML document tags.
    */
-  subscribe(): void {
-    this.router.events
+  subscribe(): Subscription {
+    return this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
-        map(_ => this.activatedRoute),
+        map(() => this.activatedRoute),
         map(route => {
           while (route.firstChild) {
             route = route.firstChild;
@@ -36,9 +36,9 @@ export class NgxSeoService {
         filter(route => route.outlet === 'primary'),
         mergeMap(route => route.data)
       )
-      .subscribe(event => {
-        if (Object.prototype.hasOwnProperty.call(event, 'seo')) {
-          this.setSeo(event.seo);
+      .subscribe(data => {
+        if (data.seo) {
+          this.setSeo(data.seo);
         }
       });
   }
@@ -48,13 +48,11 @@ export class NgxSeoService {
       this.removeMeta();
     }
 
-    if (Object.prototype.hasOwnProperty.call(seo, 'title')) {
-      // @ts-ignore
+    if (seo.title) {
       this.setTitle(seo.title);
     }
 
-    if (Object.prototype.hasOwnProperty.call(seo, 'meta')) {
-      // @ts-ignore
+    if (seo.meta) {
       this.setMeta(seo.meta);
     }
   }
@@ -228,7 +226,7 @@ export class NgxSeoService {
     this.meta.updateTag(author);
   }
 
-  setMetaSiteName(metaSiteName: string) {
+  setMetaSiteName(metaSiteName: string): void {
     const siteName: MetaDefinition = {
       name: NGX_SEO_META_KEYS.OG_SITE_NAME,
       content: metaSiteName,
@@ -237,7 +235,7 @@ export class NgxSeoService {
     this.meta.updateTag(siteName);
   }
 
-  setMetaCanonical(metaCanonical: string) {
+  setMetaCanonical(metaCanonical: string): void {
     const canonical: MetaDefinition = {
       name: NGX_SEO_META_KEYS.CANONICAL,
       content: metaCanonical,
