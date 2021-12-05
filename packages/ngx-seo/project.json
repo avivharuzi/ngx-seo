@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "packages/ngx-seo",
+  "sourceRoot": "packages/ngx-seo/src",
+  "prefix": "ngx-seo",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/packages/ngx-seo"],
+      "options": {
+        "project": "packages/ngx-seo/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/ngx-seo/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/ngx-seo/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/ngx-seo"],
+      "options": {
+        "jestConfig": "packages/ngx-seo/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/ngx-seo/src/**/*.ts",
+          "packages/ngx-seo/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

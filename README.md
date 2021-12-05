@@ -17,6 +17,7 @@ Versions compatibility list:
 
 | @avivharuzi/ngx-seo | Angular      |
 | ------------------- | ------------ |
+| 13.x.x              | 13.x.x       |
 | 12.x.x              | 12.x.x       |
 | 11.x.x              | 11.x.x       |
 | 10.x.x              | 10.x.x       |
@@ -98,27 +99,6 @@ const routes: Routes = [
 ];
 ```
 
-Now in order update the title and meta tags we need to **subscribe** in our `app.component`.
-
-```ts
-import { Component, OnInit } from '@angular/core';
-
-import { NgxSeoService } from '@avivharuzi/ngx-seo';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-})
-export class AppComponent implements OnInit {
-  constructor(private ngxSeoService: NgxSeoService) {}
-
-  ngOnInit() {
-    this.ngxSeoService.subscribe();
-  }
-}
-```
-
 ### Update Title and Meta Tags Dynamically
 
 You can also to use the service `NgxSeoService` to dynamically update title or meta tags.
@@ -157,18 +137,14 @@ export class MoiveDetailComponent implements OnInit {
 ```ts
 ...
 NgxSeoModule.forRoot({
-  titleSuffixBefore: '',
-  titleSuffixAfter: '',
+  changeTitle: (title) => title,
   preserve: false,
+  listenToRouteEvents: true,
 })
 ...
 ```
 
 ### NgxSeoService
-
-#### NgxSeoService.subscribe(): void
-
-Will listen to router changes and if seo key exist in router data try to add it to HTML document tags.
 
 #### NgxSeoService.setSeo(seo: NgxSeo): void
 

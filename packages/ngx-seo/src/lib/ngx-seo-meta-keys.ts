@@ -1,0 +1,16 @@
+export const NGX_SEO_META_KEYS = {
+  keywords: 'keywords',
+  description: 'description',
+  ogDescription: 'og:description',
+  twitterDescription: 'twitter:description',
+  ogType: 'og:type',
+  twitterCard: 'twitter:card',
+  ogImage: 'og:image',
+  twitterImage: 'twitter:image',
+  image: 'image',
+  ogURL: 'og:url',
+  twitterURL: 'twitter:url',
+  author: 'author',
+  ogSiteName: 'og:site_name',
+  canonical: 'canonical',
+};
