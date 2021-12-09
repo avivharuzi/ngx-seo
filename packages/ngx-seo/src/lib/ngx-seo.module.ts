@@ -1,4 +1,5 @@
 import {
+  APP_INITIALIZER,
   ModuleWithProviders,
   NgModule,
   Optional,
@@ -37,6 +38,14 @@ export class NgxSeoModule {
         {
           provide: NGX_SEO_CONFIG_TOKEN,
           useValue: updatedConfig,
+        },
+        {
+          provide: APP_INITIALIZER,
+          useFactory: () => () => {
+            return;
+          },
+          deps: [NgxSeoService],
+          multi: true,
         },
       ],
     };
