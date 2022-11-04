@@ -1,13 +1,10 @@
 {
   "name": "@avivharuzi/ngx-seo",
-  "version": "13.0.1",
+  "version": "0.0.0",
   "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
-    "@angular/common": "13.x",
-    "@angular/core": "13.x",
-    "@angular/platform-browser": "13.x",
-    "@angular/router": "13.x",
-    "rxjs": "7.x"
+    "@angular/common": "14.x",
+    "@angular/core": "14.x"
   },
   "repository": {
     "type": "git",

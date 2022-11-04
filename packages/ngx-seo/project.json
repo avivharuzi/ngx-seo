@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "packages/ngx-seo",
   "sourceRoot": "packages/ngx-seo/src",
   "prefix": "ngx-seo",
   "targets": {
@@ -24,7 +23,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/ngx-seo"],
       "options": {
-        "jestConfig": "packages/ngx-seo/jest.config.js",
+        "jestConfig": "packages/ngx-seo/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -32,8 +31,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/ngx-seo/src/**/*.ts",
-          "packages/ngx-seo/src/**/*.html"
+          "packages/ngx-seo/**/*.ts",
+          "packages/ngx-seo/**/*.html"
         ]
       }
     }

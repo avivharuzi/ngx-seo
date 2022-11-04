@@ -1,9 +1,11 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "ngx-seo",
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
+    "packageManager": "npm",
     "defaultCollection": "@nrwl/angular"
   },
   "implicitDependencies": {
@@ -15,10 +17,9 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "parallel": 1
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -36,9 +37,11 @@
   },
   "generators": {
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "ngx-seo"
