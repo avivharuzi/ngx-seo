@@ -256,8 +256,8 @@ export class NgxSeoService {
         mergeMap((route) => route.data)
       )
       .subscribe((data) => {
-        if (data.seo) {
-          this.setSeo(data.seo);
+        if (data['seo']) {
+          this.setSeo(data['seo']);
         }
       });
   }
