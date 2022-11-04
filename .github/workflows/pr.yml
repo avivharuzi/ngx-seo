@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm install --frozen-lockfile
       - name: Lint
-        run: npm affected:lint
+        run: npm run affected:lint
       - name: Test
-        run: npm affected:test
+        run: npm run affected:test
       - name: Build
-        run: npm affected:build
+        run: npm run affected:build
