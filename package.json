@@ -6,7 +6,6 @@
     "ng": "nx",
     "cz": "git-cz",
     "prepare": "husky install",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "release": "semantic-release",
     "build:ngx-seo": "nx build ngx-seo && cp README.md dist/packages/ngx-seo && cp LICENSE dist/packages/ngx-seo",
     "build:all": "nx run-many --target=build --all --parallel --maxParallel=3",
