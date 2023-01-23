@@ -1,3 +1,9 @@
+## [15.0.1](https://github.com/avivharuzi/ngx-seo/compare/15.0.0...15.0.1) (2023-01-23)
+
+### Bug Fixes
+
+- 🐛 angular compilation ([abcf1e7](https://github.com/avivharuzi/ngx-seo/commit/abcf1e7759e76684f9aea046daa40ef95613afb4))
+
 # [15.0.0](https://github.com/avivharuzi/ngx-seo/compare/14.0.0...15.0.0) (2023-01-23)
 
 ### chore
