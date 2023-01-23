@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
-    "@angular/common": "14.x",
-    "@angular/core": "14.x"
+    "@angular/common": ">=15.x",
+    "@angular/core": ">=15.x"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,6 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "sideEffects": false,
   "homepage": "https://github.com/avivharuzi/ngx-seo#readme"
 }
