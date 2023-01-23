@@ -1,3 +1,17 @@
+# [15.0.0](https://github.com/avivharuzi/ngx-seo/compare/14.0.0...15.0.0) (2023-01-23)
+
+### chore
+
+- 🤖 update to angular 15 ([7f9b826](https://github.com/avivharuzi/ngx-seo/commit/7f9b826af12d2afd1cd08f5fc61284b27d2697c7))
+
+### Features
+
+- 🎸 remove npm script ([7f8ff85](https://github.com/avivharuzi/ngx-seo/commit/7f8ff8589ff8abb1008541a866a7b077c6b88604))
+
+### BREAKING CHANGES
+
+- 🧨 update to angular 15
+
 # [14.0.0](https://github.com/avivharuzi/ngx-seo/compare/13.0.1...14.0.0) (2022-11-04)
 
 ### Bug Fixes
