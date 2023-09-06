@@ -16,7 +16,8 @@ I created this library because other libraries are not fit enough to my requirem
 Versions compatibility list:
 
 | @avivharuzi/ngx-seo | Angular      |
-| ------------------- | ------------ |
+|---------------------|--------------|
+| 16.x.x              | 16.x.x       |
 | 15.x.x              | 15.x.x       |
 | 14.x.x              | 14.x.x       |
 | 13.x.x              | 13.x.x       |
