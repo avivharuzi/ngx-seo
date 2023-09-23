@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Update SEO title and meta tags easily in Angular apps",
   "peerDependencies": {
-    "@angular/common": ">=15.x",
-    "@angular/core": ">=15.x"
+    "@angular/common": ">=16.x",
+    "@angular/core": ">=16.x"
   },
   "repository": {
     "type": "git",
