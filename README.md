@@ -16,7 +16,7 @@ I created this library because other libraries are not fit enough to my requirem
 Versions compatibility list:
 
 | @avivharuzi/ngx-seo | Angular      |
-|---------------------|--------------|
+| ------------------- | ------------ |
 | 16.x.x              | 16.x.x       |
 | 15.x.x              | 15.x.x       |
 | 14.x.x              | 14.x.x       |
@@ -45,7 +45,7 @@ yarn install @avivharuzi/ngx-seo
 Import `NgxSeoModule` into `AppModule` imports.
 
 ```ts
-import {NgxSeoModule} from '@avivharuzi/ngx-seo';
+import { NgxSeoModule } from '@avivharuzi/ngx-seo';
 
 imports: [
   // ...
@@ -59,7 +59,7 @@ Declare SEO data for each route recommended to use `NgxSeo` interface to prevent
 
 ```ts
 ...
-import {NgxSeo} from '@avivharuzi/ngx-seo';
+import { NgxSeo } from '@avivharuzi/ngx-seo';
 
 ...
 
@@ -78,8 +78,8 @@ const SEO_ABOUT: NgxSeo = {
 };
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, data: {seo: SEO_HOME}},
-  {path: 'about', component: AboutComponent, data: {seo: SEO_ABOUT}},
+  { path: '', component: HomeComponent, data: { seo: SEO_HOME } },
+  { path: 'about', component: AboutComponent, data: { seo: SEO_ABOUT } },
 ];
 ```
 
@@ -97,9 +97,7 @@ const SEO_SPECIAL: NgxSeo = {
   },
 };
 
-const routes: Routes = [
-  {path: 'special', component: SpecialComponent, data: {seo: SEO_SPECIAL}},
-];
+const routes: Routes = [{ path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } }];
 ```
 
 ### Update Title and Meta Tags Dynamically
