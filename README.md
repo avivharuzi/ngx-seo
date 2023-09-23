@@ -106,15 +106,13 @@ You can also to use the service `NgxSeoService` to dynamically update title or m
 
 ```ts
 ...
-
 export class MoiveDetailComponent implements OnInit {
   movie: Movie;
 
   constructor(
     private movieService: MovieService,
     private ngxSeoService: NgxSeoService,
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.movieService.getDetails(1).subscribe(movie => {
