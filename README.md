@@ -97,7 +97,9 @@ const SEO_SPECIAL: NgxSeo = {
   },
 };
 
-const routes: Routes = [{ path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } }];
+const routes: Routes = [
+  { path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } }
+];
 ```
 
 ### Update Title and Meta Tags Dynamically
