@@ -1,3 +1,20 @@
+# [16.0.0](https://github.com/avivharuzi/ngx-seo/compare/15.0.1...16.0.0) (2023-09-23)
+
+### Bug Fixes
+
+- 🐛 readme ([a4babfc](https://github.com/avivharuzi/ngx-seo/commit/a4babfc0dcc037674b0e6a86a5cdacd7fb502e08))
+- 🐛 readme ([dee8cb0](https://github.com/avivharuzi/ngx-seo/commit/dee8cb0c75288579e47fa67185639e500eba2a49))
+- 🐛 readme ([24c8184](https://github.com/avivharuzi/ngx-seo/commit/24c81843f4cc59ba8e7cbc2464745b411a723f7c))
+- 🐛 readme ([abb993d](https://github.com/avivharuzi/ngx-seo/commit/abb993db0664020b03e2d6844f10d954afe2f558))
+
+### chore
+
+- 🤖 update to angular 16 ([ba61b84](https://github.com/avivharuzi/ngx-seo/commit/ba61b8457279296bd73ccbdf576ec8270bec5d24))
+
+### BREAKING CHANGES
+
+- 🧨 update to angular 16
+
 ## [15.0.1](https://github.com/avivharuzi/ngx-seo/compare/15.0.0...15.0.1) (2023-01-23)
 
 ### Bug Fixes
