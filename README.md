@@ -98,7 +98,7 @@ const SEO_SPECIAL: NgxSeo = {
 };
 
 const routes: Routes = [
-  { path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } }
+  { path: 'special', component: SpecialComponent, data: { seo: SEO_SPECIAL } },
 ];
 ```
 
